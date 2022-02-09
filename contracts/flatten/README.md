@@ -5,15 +5,17 @@ echo "// SPDX-License-Identifier: MIT" > contracts/flatten/StakingRewards_flatte
 npx hardhat flatten contracts/StakingRewards.sol | grep -v SPDX >> contracts/flatten/StakingRewards_flatten.sol
 ```
 
-Mostly copied from CERE's staking pool contract(https://etherscan.io/address/0x9ef3e3202c1563bcd92ef03b946ed00e85f80e09#code) with slight modification like rewards duration.
+Mostly copied from CERE's staking pool contract(https://etherscan.io/address/0x9ef3e3202c1563bcd92ef03b946ed00e85f80e09#code) with slight modification like reward duration.
+# Simple Deployment
+Copy StakingRewards_flatten.sol's text content to https://remix.ethereum.org/ and start your Deployment.
 
-# Deploy Parameters
+# Deployment Parameters
 | Name                   | Type        | Description
 | ---------------------- | ----------- | ----------- |
 | _rewardsDistribution   | Address     | Reward distrubutor's address
 | _rewardsToken          | Address     | Staking Token address, on KYL mainnet, this should be 0x67B6D479c7bB412C54e03dCA8E1Bc6740ce6b99C
 | _stakingToken          | Address     | Reward Token address, on KYL mainnet, this should be 0x67B6D479c7bB412C54e03dCA8E1Bc6740ce6b99C
-| _stakingPoolCapParam   | uint256     | Staking pool capacity, setting this to 1000000000000000000000000000 gives a 10 Billion limit.
+| _stakingPoolCapParam   | uint256     | Staking pool capacity, setting this to 1000000000000000000000000000 gives a 1 Billion limit.
 
 # Privileges
 
