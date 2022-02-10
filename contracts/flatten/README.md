@@ -5,7 +5,6 @@ echo "// SPDX-License-Identifier: MIT" > contracts/flatten/StakingRewards_flatte
 npx hardhat flatten contracts/StakingRewards.sol | grep -v SPDX >> contracts/flatten/StakingRewards_flatten.sol
 ```
 
-Mostly copied from CERE's staking pool contract(https://etherscan.io/address/0x9ef3e3202c1563bcd92ef03b946ed00e85f80e09#code) with slight modification like reward duration.
 # Simple Deployment
 Copy StakingRewards_flatten.sol's text content to https://remix.ethereum.org/ and start your Deployment.
 
